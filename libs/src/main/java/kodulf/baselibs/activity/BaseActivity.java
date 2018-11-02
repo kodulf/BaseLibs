@@ -12,7 +12,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.Toast;
 
-import kodulf.baselibs.MyApplication;
 import kodulf.baselibs.R;
 import kodulf.baselibs.utils.AppUtils;
 
@@ -30,7 +29,7 @@ public abstract class BaseActivity extends AppCompatActivity{
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //添加到列表中, 可能会重复的添加，例如有进行横竖屏的切换，没有关系的添加进去就可以了
-        MyApplication.mActivityList.addFirst(this);
+        //MyApplication.mActivityList.addFirst(this);
 
         //设置统一的切换的动画
         this.setTheme(R.style.Anim_fade);
