@@ -30,6 +30,8 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.7.0'
+    implementation 'com.alibaba:fastjson:1.2.31'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
@@ -47,7 +49,7 @@ def libName = "Baselibs"
 //发布到组织名称名字，必须填写
 group = "com.kodulf.BaseLibs"
 // 版本号，下次更新是只需要更改版本号即可
-version = "v1.0.2"
+version = "v1.0.5"
 //上面配置后上传至JCenter后的编译路径是这样的： compile 'me.songning.CircleView:library:1.0.0'
 
 //生成源文件
@@ -156,3 +158,5 @@ javadoc {
 //run in terminal :
 // ./gradlew install --stacktrace
 //./gradlew bintrayUpload
+
+// add "maven { url 'https://jitpack.io' }" to Project gradle AllProjects-> repositories
